@@ -175,12 +175,7 @@ public class warmup1 {
 				j++;
 			i++;
 		}
-		if (j < 1)
-			return false;
-		else if (j < 4)
-			return true;
-		else
-			return false;
+		return j > 0 && j < 4;
 	}
 
 	// lastDigit
