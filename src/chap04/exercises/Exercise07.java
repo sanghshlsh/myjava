@@ -1,0 +1,42 @@
+package chap04.exercises;
+
+import java.util.Scanner;
+
+public class Exercise07 {
+	public static void main(String[] args) {
+
+		boolean run = true;
+
+		int balance = 0;
+		
+		Scanner scanner = new Scanner(System.in);
+		while (run) {
+			System.out.println("---------------------------------");
+			System.out.println("1.예금 | 2.출금 | 3.잔고 | 4.종료");
+			System.out.println("---------------------------------");
+			System.out.print("선택>");
+			String n = scanner.nextLine();
+			int iN = Integer.parseInt(n);
+
+			if (iN == 1) {
+				System.out.print("예금액>");
+				n = scanner.nextLine();
+				iN = Integer.parseInt(n);
+				balance += iN;
+
+
+			} else if (iN == 2) {
+				System.out.print("출금액>");
+				n = scanner.nextLine();
+				iN = Integer.parseInt(n);
+				balance -= iN;
+			} else if (iN == 3) {
+				System.out.println("잔고>"+balance);
+			} else if (iN == 4) {
+				break;
+			} 
+		}
+		System.out.println("프로그램 종료");
+
+	}
+}

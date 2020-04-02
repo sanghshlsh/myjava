@@ -1,6 +1,6 @@
 package codingbat.warmup;
 
-public class warmup1 {
+public class Warmup1 {
 	// sleeIn
 	public boolean sleepIn(boolean weekday, boolean vacation) {
 		return !weekday || vacation;
