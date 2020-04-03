@@ -105,4 +105,14 @@ public class String1 {
 		int n = str.length() / 2;
 		return str.substring(n - 1, n + 2);
 	}
+
+	// hasBad
+	public boolean hasBad(String str) {
+		if (str.length() == 3)
+			return str.substring(0, 3).equals("bad");
+		if (str.length() > 3)
+			return str.substring(0, 3).equals("bad") || str.substring(1, 4).equals("bad");
+		return false;
+	}
+
 }
