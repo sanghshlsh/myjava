@@ -248,6 +248,23 @@ public class String1 {
 		return str.substring(start, l);
 	}
 
-	
-	
+	// withoutX2
+	public String withoutX2(String str) {
+		int l = str.length();
+		String result = "";
+		for (int i = 0; i < l; i++) {
+			if (i == 2)
+				break;
+			if (str.charAt(i) == 'x') {
+				continue;
+			}
+			result = result + str.charAt(i);
+		}
+		if (l >= 2) {
+			result = result + str.substring(2);
+		}
+		return result;
+
+	}
+
 }

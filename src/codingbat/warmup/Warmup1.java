@@ -88,6 +88,12 @@ public class Warmup1 {
 	public boolean startHi(String str) {
 		return str.length() > 1 ? str.substring(0, 2).equals("hi") : false;
 	}
+	
+	//starHi_2
+	public boolean startHi_2(String str) {
+		return str.startsWith("hi");
+	}
+	
 
 	// icyHot
 	public boolean icyHot(int temp1, int temp2) {
