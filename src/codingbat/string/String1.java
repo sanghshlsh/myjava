@@ -1,4 +1,4 @@
-package codingbat.String;
+package codingbat.string;
 
 public class String1 {
 	// helloName

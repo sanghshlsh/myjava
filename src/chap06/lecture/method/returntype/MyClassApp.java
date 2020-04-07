@@ -1,4 +1,4 @@
-package chap06.lecture.returntype;
+package chap06.lecture.method.returntype;
 
 public class MyClassApp {
 	public static void main(String[] args) {
@@ -15,7 +15,7 @@ public class MyClassApp {
 		System.out.println(d);
 		System.out.println(c1.method4(5));
 		
-		
+		 
 	
 	}
 }

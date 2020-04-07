@@ -1,4 +1,4 @@
-package chap06.lecture.returntype;
+package chap06.lecture.method.returntype;
 
 public class MyClass {
 
@@ -15,7 +15,7 @@ public class MyClass {
 		
 		
 		return;
-	}
+	} 
 	
 	
 	void method2(int i) {

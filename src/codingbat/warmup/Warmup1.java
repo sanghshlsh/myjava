@@ -88,16 +88,23 @@ public class Warmup1 {
 	public boolean startHi(String str) {
 		return str.length() > 1 ? str.substring(0, 2).equals("hi") : false;
 	}
-	
-	//starHi_2
+
+	// starHi_2
 	public boolean startHi_2(String str) {
 		return str.startsWith("hi");
 	}
-	
 
 	// icyHot
 	public boolean icyHot(int temp1, int temp2) {
 		return temp1 < 0 && temp2 > 100 || temp1 > 100 && temp2 < 0;
+	}
+
+	// icyHot_2
+	public boolean icyHot_2(int temp1, int temp2) {
+		boolean negative = temp1 < 0 || temp2 < 0;
+		boolean over100 = temp1 > 100 || temp2 > 100;
+
+		return negative && over100;
 	}
 
 	// in1020
@@ -110,9 +117,26 @@ public class Warmup1 {
 		return a > 12 && a < 20 || b > 12 && b < 20 || c > 12 && c < 20;
 	}
 
+	// hasTeen_2
+	public boolean hasTeen_2(int a, int b, int c) {
+		boolean ateen = a >= 13 && a <= 19;
+		boolean bteen = b >= 13 && b <= 19;
+		boolean cteen = c >= 13 && c <= 19;
+
+		return ateen || bteen || cteen;
+	}
+
 	// loneTeen
 	public boolean loneTeen(int a, int b) {
 		return a > 12 && a < 20 && !(b > 12 && b < 20) || b > 12 && b < 20 && !(a > 12 && a < 20);
+	}
+
+	// loneTeen_2
+	public boolean loneTeen_2(int a, int b) {
+		boolean ateen = a >= 13 && a <= 19;
+		boolean bteen = b >= 13 && b <= 19;
+
+		return ateen ^ bteen;
 	}
 
 	// delDel
@@ -122,9 +146,26 @@ public class Warmup1 {
 
 	}
 
+	// delDel_2
+	public String delDel_2(String str) {
+
+		if (str.indexOf("del") == 1) {
+			String left = str.substring(0, 1);
+			String right = str.substring(4);
+			return left + right;
+		}
+		return str;
+
+	}
+
 	// mixStart
 	public boolean mixStart(String str) {
 		return str.length() > 2 && (str.substring(1, 3)).equals("ix");
+	}
+
+	// mixStart_2
+	public boolean mixStart_2(String str) {
+		return str.indexOf("ix") == 1;
 	}
 
 	// startOz
@@ -138,6 +179,38 @@ public class Warmup1 {
 				s += "z";
 
 		return s;
+	}
+
+	// starOz_2
+	public String startOz_2(String str) {
+		String result = "";
+		for (int i = 0; i < str.length(); i++) {
+			if (i == 0 && str.charAt(i) == 'o')
+				result = str.charAt(i) + result;
+			if (i == 1 && str.charAt(i) == 'z')
+				result += str.charAt(i);
+			if (i == 1)
+				break;
+
+		}
+		return result;
+	}
+
+	// starOz_3
+	public String startOz_3(String str) {
+		int loop = 2 < str.length() ? 2 : str.length();
+
+		String r = "";
+		for (int i = 0; i < loop; i++) {
+			if (i == 0 && str.charAt(i) == 'o') {
+				r += str.charAt(i);
+			}
+			if (i == 1 && str.charAt(i) == 'z') {
+				r += str.charAt(i);
+			}
+		}
+
+		return r;
 	}
 
 	// intMax
