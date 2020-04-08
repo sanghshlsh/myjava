@@ -14,3 +14,6 @@ public class ScannerNextInt {
 	
 	
 }
+
+//nextInt()		엔터나 공백전까지의 문자
+//nextLine()	엔터 전까지(내가친 엔터가 아니라도.)
